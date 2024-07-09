@@ -9,6 +9,7 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
     <DocumentationFile>bin\Debug\net8.0\GestaoPedidos.xml</DocumentationFile>
+    <SonarQubeExclude>true</SonarQubeExclude>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,11 +18,20 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GestaoPedidos.Application\GestaoPedidos.Application.csproj" />
     <ProjectReference Include="..\GestaoPedidos.Infrastructure\GestaoPedidos.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="GestaoPedidosWeb\src\GestaoPedidosWeb\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="GestaoPedidosWeb\src\GestaoPedidosWeb\appsettings.json" />
+    <_ContentIncludedByDefault Remove="GestaoPedidosWeb\src\GestaoPedidosWeb\aws-lambda-tools-defaults.json" />
+    <_ContentIncludedByDefault Remove="GestaoPedidosWeb\test\GestaoPedidosWeb.Tests\appsettings.json" />
+    <_ContentIncludedByDefault Remove="GestaoPedidosWeb\test\GestaoPedidosWeb.Tests\SampleRequests\ValuesController-Get.json" />
   </ItemGroup>
 
 </Project>
