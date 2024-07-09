@@ -16,7 +16,7 @@ data "kubernetes_secret" "cluster_ca" {
 
 resource "kubernetes_deployment" "my_api_deployment" {
   metadata {
-    name = "minha-api"
+    name = "gestao-pedidos"
   }
 
   spec {
@@ -24,21 +24,21 @@ resource "kubernetes_deployment" "my_api_deployment" {
 
     selector {
       match_labels = {
-        app = "minha-api"
+        app = "gestao-pedidos"
       }
     }
 
     template {
       metadata {
         labels = {
-          app = "minha-api"
+          app = "gestao-pedidos"
         }
       }
 
       spec {
         container {
-          image = "547185396737.dkr.ecr.us-east-2.amazonaws.com/minha-api:latest"
-          name  = "minha-api"
+          image = "547185396737.dkr.ecr.us-east-2.amazonaws.com/gestao-pedidos:latest"
+          name  = "gestao-pedidos"
           port {
             container_port = 80
           }
