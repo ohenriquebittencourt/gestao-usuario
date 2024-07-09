@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace GestaoPedidos.Application.DTOs.Cliente;
 
+[ExcludeFromCodeCoverage]
 public class AtualizarClienteDto
 {
     public int Id { get; set; }

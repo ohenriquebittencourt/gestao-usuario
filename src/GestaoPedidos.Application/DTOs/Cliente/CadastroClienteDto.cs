@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace GestaoPedidos.Application.DTOs.Cliente;
 
+[ExcludeFromCodeCoverage]
 public class CadastroClienteDto
 {
     public string Nome { get; set; } = string.Empty; 
