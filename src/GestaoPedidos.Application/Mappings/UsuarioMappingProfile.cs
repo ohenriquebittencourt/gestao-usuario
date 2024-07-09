@@ -9,10 +9,10 @@ namespace GestaoPedidos.Application.Mappings
     {
         public UsuarioMappingProfile()
         {
-            CreateMap<Usuario, UsuarioDTO>();
+            CreateMap<Usuario, UsuarioDto>();
             CreateMap<Usuario, UsuarioEntity>();
             CreateMap<UsuarioEntity, Usuario>().ConstructUsing(p => new Usuario(p.Id, p.Nome, p.Email, p.Senha, p.Tipo, p.Ativo));
-            CreateMap<UsuarioDTO, Usuario>().ConstructUsing(p => new Usuario(p.Id, p.Nome, p.Email, p.Senha, p.Tipo, p.Ativo));
+            CreateMap<UsuarioDto, Usuario>().ConstructUsing(p => new Usuario(p.Id, p.Nome, p.Email, p.Senha, p.Tipo, p.Ativo));
         }
     }
 }

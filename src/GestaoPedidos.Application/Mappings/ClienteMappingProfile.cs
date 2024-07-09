@@ -11,11 +11,11 @@ public class ClienteMappingProfile : Profile
         CreateMap<Domain.Entities.Cliente, CadastroClienteDto>();
         CreateMap<CadastroClienteDto, Domain.Entities.Cliente>();
 
-        CreateMap<Domain.Entities.Cliente, ClienteDTO>();
-        CreateMap<ClienteDTO, Domain.Entities.Cliente>();
+        CreateMap<Domain.Entities.Cliente, ClienteDto>();
+        CreateMap<ClienteDto, Domain.Entities.Cliente>();
 
-        CreateMap<AtualizarClienteDTO, Domain.Entities.Cliente>();
-        CreateMap<Domain.Entities.Cliente, AtualizarClienteDTO>();
+        CreateMap<AtualizarClienteDto, Domain.Entities.Cliente>();
+        CreateMap<Domain.Entities.Cliente, AtualizarClienteDto>();
 
         CreateMap<ClienteEntity, Domain.Entities.Cliente>().ReverseMap();
     }

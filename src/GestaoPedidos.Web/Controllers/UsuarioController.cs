@@ -27,12 +27,12 @@ namespace GestaoPedidos.Web.Controllers
         /// <response code="200">OK, Usuarios consultados</response>
         /// <response code="404">Usuarios nao encontrados</response>
         [HttpGet]
-        [ProducesResponseType(typeof(UsuarioDTO), Status200OK)]
+        [ProducesResponseType(typeof(UsuarioDto), Status200OK)]
         [ProducesResponseType(typeof(void), Status404NotFound)]
-        public async Task<IEnumerable<UsuarioDTO>> Get()
+        public async Task<IEnumerable<UsuarioDto>> Get()
         {
             var usuario = await _usuarioService.ObterUsuario();
-            return _mapper.Map<IEnumerable<UsuarioDTO>>(usuario);
+            return _mapper.Map<IEnumerable<UsuarioDto>>(usuario);
         }
 
 
@@ -43,12 +43,12 @@ namespace GestaoPedidos.Web.Controllers
         /// <response code="200">OK, Usuario consultado</response>
         /// <response code="404">Usuario nao encontrado</response>
         [HttpGet("{usuarioId:int:required}")]
-        [ProducesResponseType(typeof(UsuarioDTO), Status200OK)]
+        [ProducesResponseType(typeof(UsuarioDto), Status200OK)]
         [ProducesResponseType(typeof(void), Status404NotFound)]
-        public async Task<UsuarioDTO> Get(int usuarioId)
+        public async Task<UsuarioDto> Get(int usuarioId)
         {
             var usuario = await _usuarioService.ObterUsuario(usuarioId);
-            return _mapper.Map<UsuarioDTO>(usuario);
+            return _mapper.Map<UsuarioDto>(usuario);
         }
 
         /// <summary>
@@ -57,9 +57,9 @@ namespace GestaoPedidos.Web.Controllers
         /// <response code="200">OK, usuario cadastrado</response>
         /// <response code="500">Erro ao cadastrar usuario</response>
         [HttpPost]
-        [ProducesResponseType(typeof(UsuarioDTO), Status200OK)]
+        [ProducesResponseType(typeof(UsuarioDto), Status200OK)]
         [ProducesResponseType(typeof(void), Status404NotFound)]
-        public async Task Post([FromBody] UsuarioDTO usuarioDTO)
+        public async Task Post([FromBody] UsuarioDto usuarioDTO)
         {
             var usuario = _mapper.Map<Usuario>(usuarioDTO);
             await _usuarioService.CadastrarUsuario(usuario);
@@ -71,9 +71,9 @@ namespace GestaoPedidos.Web.Controllers
         /// <response code="200">OK, Usuario atualizado</response>
         /// <response code="500">Erro ao atualizar usuario</response>
         [HttpPut]
-        [ProducesResponseType(typeof(UsuarioDTO), Status200OK)]
+        [ProducesResponseType(typeof(UsuarioDto), Status200OK)]
         [ProducesResponseType(typeof(void), Status404NotFound)]
-        public async Task Put([FromBody] UsuarioDTO usuarioDTO)
+        public async Task Put([FromBody] UsuarioDto usuarioDTO)
         {
             var usuario = _mapper.Map<Usuario>(usuarioDTO);
             await _usuarioService.AtualizarUsuario(usuario);
@@ -85,7 +85,7 @@ namespace GestaoPedidos.Web.Controllers
         /// <response code="200">OK, usuario removido</response>
         /// <response code="500">Erro ao remover usuario</response>
         [HttpDelete("{usuarioId:int:required}")]
-        [ProducesResponseType(typeof(UsuarioDTO), Status200OK)]
+        [ProducesResponseType(typeof(UsuarioDto), Status200OK)]
         [ProducesResponseType(typeof(void), Status404NotFound)]
         public async Task Delete(int usuarioId)
         {

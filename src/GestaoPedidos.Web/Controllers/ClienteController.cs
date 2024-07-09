@@ -29,12 +29,12 @@ public class ClienteController : ControllerBase
     /// <response code="200">Dados do cliente encontrado</response>
     /// <response code="404">Cliente não encontrado</response>
     [HttpGet("{cpf:int:required}")]
-    [ProducesResponseType(typeof(ClienteDTO), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ClienteDto), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
-    public async Task<ClienteDTO> Get(string cpf)
+    public async Task<ClienteDto> Get(string cpf)
     {
         var cliente = await _clienteService.ObterCliente(cpf);
-        return _mapper.Map<ClienteDTO>(cliente);
+        return _mapper.Map<ClienteDto>(cliente);
     }
 
     /// <summary>
@@ -62,7 +62,7 @@ public class ClienteController : ControllerBase
     [HttpPut]
     [ProducesResponseType(typeof(void), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
-    public async Task Put([FromBody] AtualizarClienteDTO dto)
+    public async Task Put([FromBody] AtualizarClienteDto dto)
     {
         var cliente = _mapper.Map<Cliente>(dto);
         await _clienteService.AtualizarCliente(cliente);

@@ -1,6 +1,6 @@
 namespace GestaoPedidos.Application.DTOs.Cliente;
 
-public class AtualizarClienteDTO
+public class AtualizarClienteDto
 {
     public int Id { get; set; }
     public string Nome { get; set; } = string.Empty; 

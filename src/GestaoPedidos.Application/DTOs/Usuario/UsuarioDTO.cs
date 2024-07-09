@@ -1,6 +1,6 @@
 ﻿namespace GestaoPedidos.Application.DTOs.Usuario
 {
-    public class UsuarioDTO
+    public class UsuarioDto
     {
         public int Id { get; set; }
         public string Nome { get; set; } = string.Empty;
