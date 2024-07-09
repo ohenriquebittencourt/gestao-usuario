@@ -43,7 +43,7 @@ jobs:
           dotnet sonarscanner end /d:sonar.login=sqa_b632c864822aeae6d1e1c5f000363596eeb65460
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
