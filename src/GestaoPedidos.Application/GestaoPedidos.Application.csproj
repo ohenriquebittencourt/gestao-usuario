@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
  
-   <ItemGroup>
+  <ItemGroup>
     <SonarQubeSetting Include="sonar.coverage.exclusions">
       <Value>**/DTOs/*.cs</Value>
       <Value>**/Mappings/*.cs</Value>
