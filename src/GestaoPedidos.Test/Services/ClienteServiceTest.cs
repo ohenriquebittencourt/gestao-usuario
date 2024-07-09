@@ -21,7 +21,7 @@ namespace GestaoPedidos.Tests
         public async Task CadastrarCliente_CallsInsertMethod_WithCorrectParameters()
         {
             // Arrange
-            var cliente = new Cliente("Henrique", "444444444-44");
+            var cliente = new Cliente("Henrique", "444444444-44", "henrique@gmail.com", "27258939", DateTime.Now);
             _mockRepository.Setup(repo => repo.Cadastrar(It.IsAny<Cliente>())).Returns(Task.CompletedTask);
 
             // Act
@@ -35,7 +35,7 @@ namespace GestaoPedidos.Tests
         public async Task AtualizarCliente_CallsUpdateMethod_WithCorrectParameters()
         {
             // Arrange
-            var cliente = new Cliente("Henrique", "444444444-44");
+            var cliente = new Cliente("Henrique", "444444444-44", "henrique@gmail.com", "27258939", DateTime.Now);
             _mockRepository.Setup(repo => repo.Atualizar(It.IsAny<Cliente>())).Returns(Task.CompletedTask);
 
             // Act
@@ -50,7 +50,7 @@ namespace GestaoPedidos.Tests
         {
             // Arrange
             var cpf = "444444444-44";
-            var cliente = new Cliente("Henrique", "444444444-44");
+            var cliente = new Cliente("Henrique", "444444444-44", "henrique@gmail.com", "27258939", DateTime.Now);
             _mockRepository.Setup(repo => repo.ObterPorCpf(cpf)).ReturnsAsync(cliente);
 
             // Act

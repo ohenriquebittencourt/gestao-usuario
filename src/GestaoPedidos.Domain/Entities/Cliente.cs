@@ -1,11 +1,11 @@
 ﻿namespace GestaoPedidos.Domain.Entities
 {
-    public class Cliente(string nome, string cpf) : Entidade
+    public class Cliente(string nome, string cpf, string email, string telefone, DateTime aniversario) : Entidade
     {
         public string Nome { get; private set; } = nome;
         public string CPF { get; private set; } = cpf;
-        public string Email { get; private set; }
-        public string Telefone { get; private set; }
-        public DateTime Aniversario { get; private set; }
+        public string Email { get; private set; } = email;
+        public string Telefone { get; private set; } = telefone;
+        public DateTime Aniversario { get; private set; } = aniversario;
     }
 }
