@@ -23,11 +23,6 @@ namespace GestaoPedidos.Application.Services
             await _usuarioRepository.Atualizar(usuario);
         }
 
-        public Task<IEnumerable<Usuario>> ObterUsuario()
-        {
-            return _usuarioRepository.Obter();
-        }
-
         public Task<Usuario?> ObterUsuario(int usuarioId)
         {
             return _usuarioRepository.Obter(usuarioId);

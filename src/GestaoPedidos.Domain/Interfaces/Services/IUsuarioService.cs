@@ -6,7 +6,7 @@ namespace GestaoPedidos.Domain.Interfaces.Services
     {
         Task CadastrarUsuario(Usuario usuario);
         Task AtualizarUsuario(Usuario usuario);
-        Task<IEnumerable<Usuario>> ObterUsuario();
+        Task<IEnumerable<Usuario>> ObterUsuarios();
         Task<Usuario?> ObterUsuario(int usuarioId);
         Task RemoverUsuario(int usuarioId);
     }

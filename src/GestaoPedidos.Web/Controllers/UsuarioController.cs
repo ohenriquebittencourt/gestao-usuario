@@ -31,7 +31,7 @@ namespace GestaoPedidos.Web.Controllers
         [ProducesResponseType(typeof(void), Status404NotFound)]
         public async Task<IEnumerable<UsuarioDto>> Get()
         {
-            var usuario = await _usuarioService.ObterUsuario();
+            var usuario = await _usuarioService.ObterUsuarios();
             return _mapper.Map<IEnumerable<UsuarioDto>>(usuario);
         }
 
