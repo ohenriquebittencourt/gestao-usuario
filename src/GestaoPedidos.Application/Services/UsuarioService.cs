@@ -33,7 +33,7 @@ namespace GestaoPedidos.Application.Services
             return _usuarioRepository.Obter(usuarioId);
         }
 
-        public Task<IEnumerable<Usuario?>> ObterUsuarios()
+        public Task<IEnumerable<Usuario>> ObterUsuarios()
         {
             return _usuarioRepository.Obter();
         }
