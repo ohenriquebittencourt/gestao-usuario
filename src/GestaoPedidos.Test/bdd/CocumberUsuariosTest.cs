@@ -5,6 +5,7 @@ using Xunit.Gherkin.Quick;
 using Xunit;
 using Moq;
 
+[Collection("Feature Collection")]
 [FeatureFile("./features/usuario.feature")]
 public sealed class CocumberUsuariosTest : Feature
 {
