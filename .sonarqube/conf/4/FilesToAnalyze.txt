@@ -1,0 +1,13 @@
+﻿C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Test\bdd\CocumberClientesTest.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Test\bdd\CocumberUsuariosTest.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Test\Services\ClienteServiceTest.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Test\Services\UsuarioServiceTest.cs
+C:\Users\Henrique\.nuget\packages\microsoft.net.test.sdk\17.10.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\Henrique\.nuget\packages\microsoft.testplatform.testhost\17.10.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\Henrique\.nuget\packages\microsoft.testplatform.testhost\17.10.0\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\Henrique\.nuget\packages\xunit.runner.visualstudio\2.8.1\build\net6.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Henrique\.nuget\packages\xunit.runner.visualstudio\2.8.1\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Henrique\.nuget\packages\xunit.runner.visualstudio\2.8.1\build\net6.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Test\coverage.opencover.xml
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Test\features\cliente.feature
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Test\features\Usuario.feature

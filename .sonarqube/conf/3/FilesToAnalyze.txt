@@ -1,0 +1,13 @@
+﻿C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\AppSettings.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\Controllers\ClienteController.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\Controllers\UsuarioController.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\DependencyInjections\DependencyInjection.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\Program.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\obj\Release\net8.0\GestaoPedidos.Web.GlobalUsings.g.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\obj\Release\net8.0\GestaoPedidos.Web.AssemblyInfo.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\obj\Release\net8.0\GestaoPedidos.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\appsettings.Development.json
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\appsettings.json
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\Service.http
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Web\Properties\launchSettings.json
