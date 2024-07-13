@@ -11,7 +11,7 @@ namespace GestaoPedidos.Tests
         private readonly Mock<IUsuarioRepository> _mockRepository;
         private readonly UsuarioService _service;
 
-        public UsuarioServiceTest()
+        public UserServiceTest()
         {
             _mockRepository = new Mock<IUsuarioRepository>();
             _service = new UsuarioService(_mockRepository.Object);
