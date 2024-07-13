@@ -31,8 +31,17 @@ jobs:
       - name: Restore Dependencies
         run: dotnet restore src/GestaoPedidos.Test/GestaoPedidos.Test.csproj
 
+      - name: List Source Directory
+        run: ls -la ./src/GestaoPedidos.Test/Services/
+
+      - name: Create Output Directory
+        run: mkdir -p ./src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
+
       - name: Copy Feature Files
-        run: cp -r src/GestaoPedidos.Test/Services/*.feature src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
+        run: cp -r ./src/GestaoPedidos.Test/Services/*.feature ./src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
+
+      - name: List Output Directory
+        run: ls -la ./src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
 
       - name: Generate Test Coverage
         run: |
