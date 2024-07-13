@@ -34,6 +34,8 @@ jobs:
 
       - name: Generate Test Coverage
         run: |
+          dotnet clean
+          dotnet build
           dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
           
       - name: List
