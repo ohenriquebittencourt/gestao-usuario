@@ -34,9 +34,6 @@ jobs:
       - name: List Source Directory
         run: ls -la ./src/GestaoPedidos.Test/Services/
 
-      - name: Create Output Directory
-        run: mkdir -p ./src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
-
       - name: Copy Feature Files
         run: cp -r ./src/GestaoPedidos.Test/Services/*.feature /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services;
 
