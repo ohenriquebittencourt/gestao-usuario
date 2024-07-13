@@ -1,8 +1,8 @@
-﻿using Moq;
-using Xunit;
-using GestaoPedidos.Domain.Entities;
+﻿using GestaoPedidos.Domain.Interfaces.Repositories;
 using GestaoPedidos.Application.Services;
-using GestaoPedidos.Domain.Interfaces.Repositories;
+using GestaoPedidos.Domain.Entities;
+using Xunit;
+using Moq;
 
 namespace GestaoPedidos.Tests
 {
@@ -46,7 +46,7 @@ namespace GestaoPedidos.Tests
         }
 
         [Fact]
-        public async Task ObterUsuario_ReturnsExpectedPagamento()
+        public async Task ObterUsuario_ReturnsExpected_WithCorrectParameters()
         {
             // Arrange
             var usuarioId = 1;
@@ -61,7 +61,7 @@ namespace GestaoPedidos.Tests
         }
 
         [Fact]
-        public async Task ObterUsuarios_ReturnsExpectedPagamentos()
+        public async Task ObterUsuarios_ReturnsExpected_WithCorrectParameters()
         {
             // Arrange
             var usuarios = new List<Usuario>

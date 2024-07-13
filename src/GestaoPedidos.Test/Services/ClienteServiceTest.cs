@@ -1,8 +1,8 @@
-﻿using Xunit;
-using Moq;
-using GestaoPedidos.Domain.Entities;
+﻿using GestaoPedidos.Domain.Interfaces.Repositories;
 using GestaoPedidos.Application.Services;
-using GestaoPedidos.Domain.Interfaces.Repositories;
+using GestaoPedidos.Domain.Entities;
+using Xunit;
+using Moq;
 
 namespace GestaoPedidos.Tests
 {
@@ -46,7 +46,7 @@ namespace GestaoPedidos.Tests
         }
 
         [Fact]
-        public async Task ObterCliente_ReturnsExpectedCategoriaProduto()
+        public async Task ObterCliente_ReturnsExpected_WithCorrectParameters()
         {
             // Arrange
             var cpf = "444444444-44";

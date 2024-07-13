@@ -20,6 +20,7 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Xunit.Gherkin.Quick" Version="4.5.0" />
       <PackageReference Include="xunit.runner.visualstudio" Version="2.8.1">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -28,6 +29,15 @@
 
     <ItemGroup>
       <ProjectReference Include="..\GestaoPedidos.Web\GestaoPedidos.Web.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="features\cliente.feature">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="features\Usuario.feature">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>
