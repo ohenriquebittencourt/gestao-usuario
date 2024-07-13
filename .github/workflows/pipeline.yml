@@ -33,9 +33,6 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --output ./artifacts/
       
-      - name: List output directory
-        run: ls ./artifacts/bin/Debug/net8.0/features/
-
       - name: Generate Test Coverage
         run: |
           dotnet test --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
