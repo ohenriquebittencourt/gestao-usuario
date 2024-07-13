@@ -7,6 +7,12 @@
         <CollectCoverage>true</CollectCoverage> 
     </PropertyGroup>
 
+     <ItemGroup>
+       <None Update="features\**">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+       </None>
+     </ItemGroup>
+
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.6" />
       <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
