@@ -36,7 +36,7 @@ jobs:
         run: |
           dotnet clean
           dotnet build
-          dotnet test --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+          dotnet test --configuration Debug /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 
           
       - name: List
