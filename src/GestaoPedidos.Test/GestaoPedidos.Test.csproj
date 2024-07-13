@@ -5,8 +5,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <CollectCoverage>true</CollectCoverage> 
+        <CoverletOutputFormat>opencover</CoverletOutputFormat>
+        <Exclude>[*]*.Tests?[*]*</Exclude>
     </PropertyGroup>
-
+    
      <ItemGroup>
        <None Update="features\**">
          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
