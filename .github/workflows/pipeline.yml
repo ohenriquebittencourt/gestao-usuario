@@ -34,9 +34,10 @@ jobs:
 
       - name: Generate Test Coverage
         run: |
-          cd src/GestaoPedidos.Test/
-          dotnet build --configuration Release --no-restore
-          dotnet test --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+          dotnet clean
+          dotnet build
+          dotnet test --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+
           
       - name: List
         run:
