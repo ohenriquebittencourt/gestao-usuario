@@ -24,7 +24,7 @@ namespace GestaoPedidos.Test.Services
 
         #region OBTER
 
-        [Given(@"acessar a rota de busca de usuario")]
+        [Given(@"acessar a rota de busca de varios usuario")]
         public void Acessar_rota_de_busca_usuario()
         {
             var url = $"https://seusite.com/api/usuario";

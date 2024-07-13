@@ -6,7 +6,7 @@ Scenario: Obter Usuario
 	Then obter os usuario com sucesso
 
 Scenario: Obter Usuarios
-	Given acessar a rota de busca de usuarios
+	Given acessar a rota de busca varios usuarios
 	When eu efetuar a requisicao de busca de usuarios
 	Then obter os usuarios com sucesso
 
