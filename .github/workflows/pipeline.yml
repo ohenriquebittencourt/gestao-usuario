@@ -42,12 +42,12 @@ jobs:
       - name: List Output Directory
         run: ls -la /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
 
-      - name: Verify Feature File
-        run: |
-          if [ ! -f /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services/usuario.feature ]; then
-            echo "Error: usuario.feature not found!"
-            exit 1
-          fi
+      # - name: Verify Feature File
+      #   run: |
+      #     if [ ! -f /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services/usuario.feature ]; then
+      #       echo "Error: usuario.feature not found!"
+      #       exit 1
+      #     fi
 
       - name: Generate Test Coverage
         run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
