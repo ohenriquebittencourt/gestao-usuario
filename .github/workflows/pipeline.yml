@@ -27,17 +27,14 @@ jobs:
           dotnet sonarscanner begin /d:sonar.cs.opencover.reportsPaths=./src/GestaoPedidos.Test/coverage.opencover.xml /d:sonar.cs.vscoveragexml.reportsPaths=./src/GestaoPedidos.Test/coverage.opencover.xml /o:fiap /k:usuario /d:sonar.login=sqa_b632c864822aeae6d1e1c5f000363596eeb65460 /d:sonar.verbose=true /d:sonar.dotnet.excludeTestProjects=true /d:sonar.host.url=http://54.161.116.110:9000
 
       - name: Build
-        run: dotnet build --configuration Release --output ./artifacts/
+        run: dotnet build .
 
       - name: Restore Dependencies
         run: dotnet restore src/GestaoPedidos.Test/GestaoPedidos.Test.csproj
 
       - name: Generate Test Coverage
         run: |
-          dotnet clean
-          dotnet build
-          dotnet test --configuration Debug /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-
+          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
           
       - name: List
         run:

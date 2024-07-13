@@ -1,0 +1,8 @@
+﻿C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\DTOs\Cliente\AtualizarClienteDto.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\DTOs\Cliente\CadastroClienteDto.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\DTOs\Cliente\ClienteDto.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\DTOs\Usuario\UsuarioDto.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\Mappings\ClienteMappingProfile.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\Mappings\UsuarioMappingProfile.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\Services\ClienteService.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Application\Services\UsuarioService.cs

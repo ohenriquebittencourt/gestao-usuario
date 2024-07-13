@@ -1,0 +1,8 @@
+﻿C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Entities\Cliente.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Entities\Entidade.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Entities\Usuario.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Exceptions\Exceptions.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Interfaces\Repositories\IClienteRepository.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Interfaces\Repositories\IUsuarioRepository.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Interfaces\Services\IClienteService.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Domain\Interfaces\Services\IUsuarioService.cs

@@ -1,0 +1,10 @@
+﻿C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Configuration\DatabaseAdaptersConfiguration.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Contexts\ClienteContext.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Contexts\ModuleInitializer.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Contexts\UsuarioContext.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Entities\Clientes\ClienteEntity.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Entities\Entity.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Entities\Usuarios\UsuarioEntity.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\MapContext\ConfigureMap.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Repositories\ClienteRepository.cs
+C:\Users\Henrique\workspace\FIAP\gestao-usuario\src\GestaoPedidos.Infrastructure\Data\Repositories\UsuarioRepository.cs
