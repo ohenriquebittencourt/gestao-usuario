@@ -38,10 +38,10 @@ jobs:
         run: mkdir -p ./src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
 
       - name: Copy Feature Files
-        run: cp -r ./src/GestaoPedidos.Test/Services/*.feature ./src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
+        run: cp -r ./src/GestaoPedidos.Test/Services/*.feature /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services;
 
       - name: List Output Directory
-        run: ls -la ./src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
+        run: ls -la /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services;
 
       - name: Generate Test Coverage
         run: |
