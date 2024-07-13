@@ -8,13 +8,7 @@
     </PropertyGroup>
   
     <ItemGroup>
-        <None Update="Services/usuario.feature">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Update="Services/cliente.feature">
+        <None Update="Services/*.feature">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>
