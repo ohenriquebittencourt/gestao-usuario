@@ -7,9 +7,9 @@ using Moq;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GestaoPedidos.Tests
+namespace GestaoPedidos.Test.Services
 {
-    [FeatureFile("./features/cliente.feature")]
+    [FeatureFile("Services/cliente.feature")]
     public sealed class CocumberClientesTest : Feature
     {
         private readonly Mock<IClienteRepository> _mockRepository;

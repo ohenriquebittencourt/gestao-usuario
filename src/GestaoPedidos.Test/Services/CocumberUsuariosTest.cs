@@ -6,9 +6,9 @@ using Xunit.Gherkin.Quick;
 using Moq;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GestaoPedidos.Tests
+namespace GestaoPedidos.Test.Services
 {
-    [FeatureFile("./features/usuario.feature")]
+    [FeatureFile("Services/usuario.feature")]
     public sealed class CocumberUsuariosTest : Feature
     {
         private readonly Mock<IUsuarioRepository> _mockRepository;
