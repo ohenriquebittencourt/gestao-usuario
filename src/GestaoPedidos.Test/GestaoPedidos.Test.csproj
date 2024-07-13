@@ -6,6 +6,12 @@
         <Nullable>enable</Nullable>
         <CollectCoverage>true</CollectCoverage> 
     </PropertyGroup>
+  
+    <ItemGroup>
+      <None Update="Services/*.feature">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.6" />
