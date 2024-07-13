@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to EKS
 
 on:
   push:
@@ -13,15 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
+          # Disabling shallow clones is recommended for improving the relevancy of reporting
           fetch-depth: 0
           
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '8.0.x'
-
-      - name: Restore Dependencies
-        run: dotnet restore src/GestaoPedidos.Test/GestaoPedidos.Test.csproj
 
       - name: Sonarqube Begin
         run: |
@@ -31,33 +29,20 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --output ./artifacts/
 
+      - name: Restore Dependencies
+        run: dotnet restore src/GestaoPedidos.Test/GestaoPedidos.Test.csproj
+
       - name: Build Test Project
         run: dotnet build src/GestaoPedidos.Test --configuration Release
-      
-      - name: Run Tests with Coverage
-        run: dotnet test --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Configuration=Release
-
-      # - name: Dotnet Build
-      #   run: |
-      #     dotnet build .
-
-      # - name: Build
-      #   run: dotnet build --configuration Release --output ./artifacts/
-
-      # - name: Restore Dependencies
-      #   run: dotnet restore src/GestaoPedidos.Test/GestaoPedidos.Test.csproj
-
-      # - name: Build Test Project
-      #   run: dotnet build src/GestaoPedidos.Test --configuration Release
 
       # - name: Generate Test Coverage
       #   run: |
       #     dotnet test --no-build --no-restore --filter FullyQualifiedName~GestaoPedidos.Test.* /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Configuration=Release
 
-      # - name: Generate Test Coverage
-      #   run: |
-      #     dotnet test --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-
+      - name: Generate Test Coverage
+        run: |
+          dotnet test --no-build --no-restore --filter FullyQualifiedName~GestaoPedidos.Test.* /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Configuration=Release
+          
       - name: List
         run:
           ls -la ./src/GestaoPedidos.Test/
