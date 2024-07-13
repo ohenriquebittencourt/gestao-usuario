@@ -34,7 +34,7 @@ jobs:
 
       - name: Generate Test Coverage
         run: |
-          dotnet test --no-build --no-restore --filter FullyQualifiedName~GestaoPedidos.Test.* /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Configuration=Release
+          dotnet test --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
           
       - name: List
         run:
