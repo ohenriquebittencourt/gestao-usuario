@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          
+
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
@@ -35,21 +35,26 @@ jobs:
         run: ls -la ./src/GestaoPedidos.Test/Services/
 
       - name: Copy Feature Files
-        run: cp -r ./src/GestaoPedidos.Test/Services/*.feature /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services;
+        run: cp -r ./src/GestaoPedidos.Test/Services/*.feature /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
 
       - name: List Output Directory
-        run: ls -la /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services;
+        run: ls -la /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services/
+
+      - name: Verify Feature File
+        run: |
+          if [ ! -f /home/runner/work/gestao-usuario/gestao-usuario/src/GestaoPedidos.Test/bin/Debug/net8.0/Services/usuario.feature ]; then
+            echo "Error: usuario.feature not found!"
+            exit 1
+          fi
 
       - name: Generate Test Coverage
-        run: |
-          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-          
-      - name: List
+        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+
+      - name: List Test Project Directory
         run: ls -la ./src/GestaoPedidos.Test/
 
       - name: Sonarqube End
-        run: |
-          dotnet sonarscanner end /d:sonar.login=sqa_b632c864822aeae6d1e1c5f000363596eeb65460
+        run: dotnet sonarscanner end /d:sonar.login=sqa_b632c864822aeae6d1e1c5f000363596eeb65460
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -57,7 +62,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-    
+
       - name: Install dotnet Lambda
         run: dotnet tool install --global Amazon.Lambda.Tools
 
